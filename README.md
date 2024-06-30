@@ -29,18 +29,12 @@ The code includes the following functions:
   - Retrieves the length of the `NFTvar` array, representing the total number of minted NFTs.
   - Logs the total supply to the console.
 
-**Running the Code**
 
-1. Save the code as a JavaScript file (e.g., `nft_minting_example.js`).
-2. Run the JavaScript file using Node.js: `node nft_minting_example.js`
-
-The output will display information about the minted NFTs and their total count.
 
 **Important Note**
 
 Real-world NFT development involves interacting with blockchain platforms and smart contracts. This code provides a basic educational foundation for understanding NFT metadata management.
 
-I hope this README file effectively explains the code and its purpose!
 
 
 
@@ -49,9 +43,7 @@ I hope this README file effectively explains the code and its purpose!
 
 
 
-## Getting Started
-
-### Executing program
+### Executing programs
 
 To run the program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
