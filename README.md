@@ -35,7 +35,7 @@ The code includes the following functions:
 
 Real-world NFT development involves interacting with blockchain platforms and smart contracts. This code provides a basic educational foundation for understanding NFT metadata management.
 
-## MyToken: A Simple ERC-20 Token (Educational Example) (myToken.sol)
+# MyToken: A Simple ERC-20 Token (myToken.sol)
 
 This Solidity contract implements a basic ERC-20 token named "META" (with abbreviation "MTA") for educational purposes. It demonstrates core functionalities like minting and burning tokens.
 
