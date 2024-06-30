@@ -3,7 +3,7 @@
 Metacrafters Assessment Solutions
 ## Description
 
-This repository contains solutions and explanations for various assessments provided on the Metacrafters platform. These solutions are aimed to help users understand the concepts better and prepare for their own assessments. Each solution is thoroughly explained, ensuring that users not only get the correct answer but also understand the underlying principles and logic.
+
 
 ## Getting Started
 
