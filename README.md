@@ -1,6 +1,4 @@
-# Metacrafters
 
-Metacrafters Assessment Solutions
 # Simplified NFT Minting Example (NFT.js)
 
 This code simulates a basic NFT minting process, demonstrating how to manage NFT metadata in JavaScript. It's intended for educational purposes and doesn't directly interact with a blockchain platform.
