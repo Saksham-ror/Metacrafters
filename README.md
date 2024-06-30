@@ -69,7 +69,7 @@ This code provides a simplified example for learning purposes. Real-world token 
 
 
 
-### Executing programs
+# Executing programs
 
 To run the program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
@@ -79,14 +79,9 @@ To compile the code, click on the "Solidity Compiler" tab in the left-hand sideb
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the contract from the dropdown menu, and then click on the "Deploy" button.
 
 
-## Authors
+# Authors
 
 Contributors names and contact info
 
 Saksham
 https://github.com/Saksham-ror
-
-
-## License
-
-This project is licensed under the Saksham. License - see the LICENSE.md file for details
