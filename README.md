@@ -29,9 +29,6 @@ The code includes the following functions:
 
 
 
-**Important Note**
-
-Real-world NFT development involves interacting with blockchain platforms and smart contracts. This code provides a basic educational foundation for understanding NFT metadata management.
 
 # MyToken: A Simple ERC-20 Token (myToken.sol)
 
@@ -54,10 +51,33 @@ This Solidity contract implements a basic ERC-20 token named "META" (with abbrev
    - Includes a conditional check to ensure the burning account's balance (`balances[_address]`) is sufficient to burn the desired amount (`_value`).
      - If the balance is sufficient, it reduces the `totalSupply` and the account's balance by `_value`.
 
+# errHand: Scholarship Management Contract (errHandling.sol)
 
-**Important Note:**
+This Solidity contract, `errHand`, simulates a simplified scholarship program for educational purposes. It demonstrates student registration, eligibility checks, and (intentionally flawed) transfer functionality.
 
-This code provides a simplified example for learning purposes. Real-world token implementations involve more complex features and security considerations. Refer to the official ERC-20 standard and best practices for robust token development.
+**Key Functionalities:**
+
+- **`minPercent`:** Public variable storing the minimum percentage requirement for scholarship eligibility (set to 75%).
+- **`student` Mapping:** Maps student addresses to their `studentDetails` struct.
+- **`studentDetails` Struct:** Holds data for each registered student:
+   - `percent`: The student's recorded percentage.
+   - `scholarship`: Boolean flag indicating scholarship eligibility.
+- **`registerStudent` Function:**
+   - Takes a student's percentage (`_percent`) as input.
+   - Enforces eligibility using a `require` statement:
+     - If `_percent` is less than `minPercent`, reverts the transaction with an error message.
+   - If eligible, stores the percentage and sets the `scholarship` flag to `true` for the sender's address (`msg.sender`).
+- **`isRegistered` Function (Flawed):**
+   - Takes a student's address (`student`) as input.
+   - Contains a flawed assertion statement:
+     - Attempts to assert that the student is already registered (`scholarship` is not `false`). This assertion doesn't revert the transaction, potentially leading to unexpected behavior.
+   - Returns the student's scholarship eligibility (if the assertion passes).
+- **`transfer` Function (Flawed):**
+   - Takes a recipient address (`recipient`) and an amount to transfer (`amount`) as input.
+   - Contains a critical error:
+     - Uses `revert(false)` instead of `revert()` or emitting an error. This will always revert the transaction without a proper error message.
+   - Intends to transfer `amount` to the recipient, but due to the error, it will always revert.
+
 
 
 
