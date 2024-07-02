@@ -67,12 +67,12 @@ This Solidity contract, `errHand`, simulates a simplified scholarship program fo
    - Enforces eligibility using a `require` statement:
      - If `_percent` is less than `minPercent`, reverts the transaction with an error message.
    - If eligible, stores the percentage and sets the `scholarship` flag to `true` for the sender's address (`msg.sender`).
-- **`isRegistered` Function (Flawed):**
+- **`isRegistered` Function:**
    - Takes a student's address (`student`) as input.
    - Contains a flawed assertion statement:
      - Attempts to assert that the student is already registered (`scholarship` is not `false`). This assertion doesn't revert the transaction, potentially leading to unexpected behavior.
    - Returns the student's scholarship eligibility (if the assertion passes).
-- **`transfer` Function (Flawed):**
+- **`transfer` Function:**
    - Takes a recipient address (`recipient`) and an amount to transfer (`amount`) as input.
    - Contains a critical error:
      - Uses `revert(false)` instead of `revert()` or emitting an error. This will always revert the transaction without a proper error message.
