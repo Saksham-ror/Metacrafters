@@ -5,7 +5,7 @@ pragma solidity ^0.8.17;
 
 contract errHand{
     uint minPercent= 75;
-    mapping(address => studentDetails) public student;
+    mapping(address => studentDetails) public studentMap;
     struct studentDetails{
         uint percent;
         bool scholarship;
@@ -13,17 +13,17 @@ contract errHand{
 
     function registerStudent(uint _percent) public{
         require(_percent>=minPercent,"Student is not eligible for scholarship");
-        student[msg.sender].percent= _percent;
-        student[msg.sender].scholarship =true;
+        studentMap[msg.sender].percent= _percent;
+        studentMap[msg.sender].scholarship =true;
     }
 
     function isRegistered(address student) public view returns(bool){
-        assert(student[student].scholarship!=false,"Student is not eligible");
-        returns student[student].scholarship;
+        assert(studentMap[student].scholarship!=false);
+        return studentMap[student].scholarship;
     }
 
     function transfer(address recipient, uint amount) public {
-    revert(false);
+    revert();
     payable(recipient).transfer(amount);
   }
 }
